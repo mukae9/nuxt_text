@@ -1,6 +1,0 @@
-[submodule "curriculum-textlint"]
-	path = curriculum-textlint
-	url = git@github.com:Techpit-Market/curriculum-textlint.git
-[submodule "curriculum-format"]
-	path = curriculum-format
-	url = git@github.com:Techpit-Market/curriculum-format.git
