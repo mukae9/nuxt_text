@@ -18,7 +18,8 @@
 それでは実際にどのようなサイトを作成するか確認してみましょう。
 
 スムーズに画面遷移します。
-[![Image from Gyazo](https://i.gyazo.com/6f85c648e4d072974f9a39fcee397882.gif)](https://gyazo.com/6f85c648e4d072974f9a39fcee397882)
+[![Image from Gyazo](https://i.gyazo.com/3d5ed5edec98d644dc7bb7b6b6770ea5.gif)](https://gyazo.com/3d5ed5edec98d644dc7bb7b6b6770ea5)
+
 
 評価機能やカート機能、購入時のメール送信なども実装します。
 [![Image from Gyazo](https://i.gyazo.com/09e243da50442ec869a8e61eebfbad9c.gif)](https://gyazo.com/09e243da50442ec869a8e61eebfbad9c)
