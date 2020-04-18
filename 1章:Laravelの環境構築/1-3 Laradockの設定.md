@@ -18,19 +18,28 @@ Vscodeを開き、左上のファイルが二重になっているアイコン�
 
 
 フォルダから開くを選択して前章で作ったLaravelフォルダを開きます。
+
+
 [![Image from Gyazo](https://i.gyazo.com/d0b3f12ba162b37c3da251c525c1ec84.png)](https://gyazo.com/d0b3f12ba162b37c3da251c525c1ec84)
 
 Laravelフォルダが無事に開けましたね。
+
+
 [![Image from Gyazo](https://i.gyazo.com/84eea25e2fc647fcc8d49ddd49412200.png)](https://gyazo.com/84eea25e2fc647fcc8d49ddd49412200)
 
 laradockフォルダにすごい量のフォルダがあることも確認できます。
+
 （今回の教材では一部しか触りませんのでご安心ください）
 
+VScodeでフォルダを開けたところ設定の編集をしていきます。
 
-### laradockの環境設定を行います
+
+### laradockの環境設定
 
 まずはlaradockフォルダで「右クリック」→「ターミナルで開く」を選択して下さい。
+
 [![Image from Gyazo](https://i.gyazo.com/60782a2d3c24b1e9a4e803ff7baf0e9b.png)](https://gyazo.com/60782a2d3c24b1e9a4e803ff7baf0e9b)
+
 
 すると右下にターミナルが開きました。
 便利なことに最初からlaradockフォルダに居てくれてますのでcdなどを使って移動する手間が省けますね。
@@ -148,18 +157,21 @@ nginx/sites/default.confを画像を参考に開いて下さい。
 
 ECappというのは、次の章で作成するLaravel自体のフォルダの名前です。
 ここを変更する場合は連動して次の章のフォルダの名前も変える必要がありますので注意してください。
+
 （以降の説明もECappという名称で説明しますので初心者の方は無難にECappでいいかと思います。）
 
 これでnginxがlocalhostにアクセスされた際に
 ECapp/publicを見に行ってくれるような設定になりました。
+
 ECapp/publicとは具体的には次章で落とすLaravelフォルダの中にあるpublicフォルダのindex.phpの事です。
 
 ### Dockerのコンテナを立ち上げる
 
 laradockの調整も完了したので、実際にDockerのコンテナ(環境)を立ち上げましょう！
+
 （ネット環境が悪いとこだと時間がかかりすぎるので注意！）
 
-まずはDockerアプリの再起動を行います。
+まずは上記の編集を確実に反映させるためにDockerアプリの再起動を行います。
 パソコンの画面右上にクジラのマークがあるかと思いますが、
 画像の通りrestartを押してください。
 
@@ -189,9 +201,16 @@ ERROR: Couldn't connect to Docker daemon. You might need to start Docker for Mac
 
 数分経って、、、
 
-[![Image from Gyazo](https://i.gyazo.com/213ae3f5820f756f0025deacfabd6199.png)](https://gyazo.com/213ae3f5820f756f0025deacfabd6199)
+```
+Starting laradock_mysql_1            ... done
+Starting laradock_docker-in-docker_1 ... done
+Starting laradock_workspace_1        ... done
+Creating laradock_phpmyadmin_1       ... done
+Starting laradock_php-fpm_1          ... done
+Starting laradock_nginx_1            ... done
+```
 
-こちらが表示されたらサーバー/MySQL/phpMyadminが動き始めています。
+このような表記がされたらサーバー/MySQL/phpMyadminが動き始めている証拠です。
 
 もし、mysqlなどがExitとなった方は、
 XAMPPやMAMP、他のDockerが起動していませんか？？

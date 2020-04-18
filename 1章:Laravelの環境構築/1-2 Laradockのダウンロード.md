@@ -73,7 +73,7 @@ ls
 を打つともちろん何も入っていません。
 ここにLaradock（環境側サーバー・DB）とECapp（実際のLaravelフォルダ）を作成して行きます。
 
-### いよいよLaradockをダウンロードします！
+### Laradockって？
 
 それではまずはLaradockをダウンロードしていきたいと思います。
 
@@ -88,9 +88,7 @@ Dockerという仮想環境を使う際にはDockerFileやdocker-compose.yamlな
 世界各国のエンジニアが有志でDockerのバージョンなどに合わしてこのDockerFileなどの環境を更新し
 、すぐに使える状態にしてくれていることを考えると非常に有用な存在ではないでしょうか。
 
-
-[![Image from Gyazo](https://i.gyazo.com/d2fc7f7d43efa72ae513295c110d4a93.png)](https://gyazo.com/d2fc7f7d43efa72ae513295c110d4a93)
-
+### いよいよLaradockをダウンロードします！
 
 それでは実際にインストールします。
 インストール自体は簡単です。（ネット環境が遅すぎると時間がかかりますので注意してください）
