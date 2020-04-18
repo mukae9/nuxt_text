@@ -7,8 +7,10 @@
  馴染みの深いSPAサイトとしては「GoogleMap」や「Facebook」「Trello」などがあり、ページの読み込みを感じさせずに高速に遷移するこれらのサービスは近代チックでとても魅力的に映ります。
 
  [![Image from Gyazo](https://i.gyazo.com/d20dd64cd4d750a014c87e395aa3f2d9.jpg)](https://gyazo.com/d20dd64cd4d750a014c87e395aa3f2d9)
- 今回の教材ではこのSPAの技術を使って以上のようなAmazon風ECサイトを作成したいと思います。
+ 今回の教材ではこのSPAの技術を使って上記のようなAmazon風ECサイトを作成したいと思います。
 
+
+## LaravelとNuxt.jsで効率的にSPA開発
 さて、そうは言っても実装するのはとても難しいのでは？と思う方もいらっしゃるかと思いますが、PHPフレームワークで人気の**Laravel**と、**JavascriptのフレームワークのVue.jsのフレームワークのNuxt.js**を使うことで比較的簡単に実装が可能です。
 今、誤字かと思い文章を二回読んだ方もいるかと思いますが、Nuxt.jsはjavascriptで人気のフレームワークVue.jsをさらに使いやすくするために存在するフレームワークで誤字ではありません。
 
