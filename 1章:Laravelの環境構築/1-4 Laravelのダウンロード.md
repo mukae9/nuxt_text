@@ -100,6 +100,8 @@ Laradockの.envで設定した情報と一致させています。
 
 
 Laradockの.envが鍵穴
+
+
 Laravelの.envが鍵です。
 
 
