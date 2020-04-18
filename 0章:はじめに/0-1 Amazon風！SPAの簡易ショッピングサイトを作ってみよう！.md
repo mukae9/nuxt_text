@@ -20,7 +20,6 @@
 スムーズに画面遷移します。
 [![Image from Gyazo](https://i.gyazo.com/6f85c648e4d072974f9a39fcee397882.gif)](https://gyazo.com/6f85c648e4d072974f9a39fcee397882)
 
-
 評価機能やカート機能、購入時のメール送信なども実装します。
 [![Image from Gyazo](https://i.gyazo.com/09e243da50442ec869a8e61eebfbad9c.gif)](https://gyazo.com/09e243da50442ec869a8e61eebfbad9c)
 
