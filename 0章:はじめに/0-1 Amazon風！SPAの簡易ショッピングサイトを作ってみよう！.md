@@ -6,6 +6,9 @@
  
  馴染みの深いSPAサイトとしては「GoogleMap」や「Facebook」「Trello」などがあり、ページの読み込みを感じさせずに高速に遷移するこれらのサービスは近代チックでとても魅力的に映ります。
 
+ [![Image from Gyazo](https://i.gyazo.com/d20dd64cd4d750a014c87e395aa3f2d9.jpg)](https://gyazo.com/d20dd64cd4d750a014c87e395aa3f2d9)
+ 今回の教材ではこのSPAの技術を使って以上のようなAmazon風ECサイトを作成したいと思います。
+
 さて、そうは言っても実装するのはとても難しいのでは？と思う方もいらっしゃるかと思いますが、PHPフレームワークで人気の**Laravel**と、**JavascriptのフレームワークのVue.jsのフレームワークのNuxt.js**を使うことで比較的簡単に実装が可能です。
 今、誤字かと思い文章を二回読んだ方もいるかと思いますが、Nuxt.jsはjavascriptで人気のフレームワークVue.jsをさらに使いやすくするために存在するフレームワークで誤字ではありません。
 
@@ -22,7 +25,9 @@
 
 
 評価機能やカート機能、購入時のメール送信なども実装します。
-[![Image from Gyazo](https://i.gyazo.com/09e243da50442ec869a8e61eebfbad9c.gif)](https://gyazo.com/09e243da50442ec869a8e61eebfbad9c)
+[![Image from Gyazo](https://i.gyazo.com/e0c9acfbe7d430e0112413a34763adb4.png)](https://gyazo.com/e0c9acfbe7d430e0112413a34763adb4)
+
+[![Image from Gyazo](https://i.gyazo.com/1ffe234353ba9b3a413dc328a66ddb76.jpg)](https://gyazo.com/1ffe234353ba9b3a413dc328a66ddb76)
 
 以上のようなサイトの作成を行います。
 次の項目でより詳細な学習内容をご確認ください。
