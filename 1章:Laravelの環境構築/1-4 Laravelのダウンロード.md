@@ -12,7 +12,7 @@ Documents
     └── ECapp
 ```
 
-つまりECappを作成することとなっていきます。
+つまりこの章ではECappを作成することとなっていきます。
 
 ### Laravel7をComposerでインストール
 
@@ -47,7 +47,7 @@ composer create-project laravel/laravel ECapp "7.*"
 
 上記のようにインストールが完了します。
 
-Laravelフォルダで
+再度Laravelフォルダで
 
 ```
 $ ls
@@ -63,12 +63,17 @@ laradock
 
 ### データベース接続の設定をしよう
 
-ECappをインストール出来たところで一点だけ変更をします。
+Laravel自体のフォルダ（ECapp）をインストール出来たところで一点だけ変更をします。
 
-ECapp/.envをVScodeで開いてください。
-また.envが出てきましたが、これは「Laravel側」の環境設定です。前章で調整した.envとは全くの別物ですので認識しててください。
+LaravelフォルダをVScodeで開いていますので、その中にあるECappフォルダは自動で反映されているかと思います。
 
-ECapp/.envで以下の記述を、
+（もし反省されていない場合は一度VScodeを再起動してみてください。）
+
+そこからECappフォルダの中の.envをVScodeで開いてください。
+
+また.envが出てきましたがこれは「Laravel側」の環境設定です。前章で調整したLaradockの.envとは全くの別物ですので認識しててください。
+
+ECapp/.envで以下の記述を探します。
 
 ```
 DB_CONNECTION=mysql
@@ -78,7 +83,8 @@ DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-以下に修正して下さい。
+
+そして以下に修正して下さい。
 
 ```
 DB_CONNECTION=mysql
@@ -88,9 +94,19 @@ DB_DATABASE=default
 DB_USERNAME=default
 DB_PASSWORD=secret
 ```
-Laradockで設定した情報と一致させています。
+Laradockの.envで設定した情報と一致させています。
 
-これでlaravel側の設定も完了しました。
+なんでこんなに.envが出てくるんだと思う方がいるかもしれませんがイメージとしては
+
+
+Laradockの.envが鍵穴
+Laravelの.envが鍵です。
+
+
+ここが一致するからLaravelのアプリ側からLaradockが構築したデータベースにアクセスする際に許可が出ます。もしここが一致しないとエラーが出てしまうのです。
+
+
+さて、これでlaravel側の設定も完了しました。
 いよいよ表示の確認です！
 
 ### Laravelをブラウザで表示しよう
@@ -109,6 +125,8 @@ http://localhost/
 残念ながら404 NOT FOUNDの画面になってしまった方は、
 1-3 Laradockの設定で調整したnginx/site/default.confをいじった部分をよーーく見てください。
 多分そこのミスです！
+
+
 本当にあなたが作ったLaravelのフォルダ名とdefault.confの情報が一致していますか？
 (筆者が決めたECappというフォルダ名から変えているなら、default.confの中身も変える必要がありますよ！）
 
