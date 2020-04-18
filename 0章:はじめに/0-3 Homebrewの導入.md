@@ -8,7 +8,9 @@ Homebrewとは、ソフトウェアの導入を単純化するmacOSのパッケ�
 
 上記のリンクにアクセスすると下記のような画面が表示されるので「インストール」と記載されているスクリプトをターミナル上で実行してください。
 
+```
 '/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"'
+```
 
 ってことですね。
 
@@ -22,11 +24,14 @@ Homebrewをインストールしたら、Homebrewがインストールされて�
 
 ```
 $ brew -v
-Homebrew 2.1.16
-Homebrew/homebrew-core (git revision 1e525; last commit 2019-11-11)
-Homebrew/homebrew-cask (git revision 8767c; last commit 2019-11-11)
+Homebrew 2.2.13
+Homebrew/homebrew-core (git revision d89a1; last commit 2020-04-16)
 ```
 
-上記のように`2.1.16`のようなバージョンが表示されればHomebrewはインストールされています。
+上記のように`2.2.13`のようなバージョンが表示されればHomebrewはインストールされています。
 
-（筆者のPCでは`2.1.16`と表示されていますが、インストールした時期によってバージョンは違います。なので`2.1.16`ではなく、`2.1.17`など別のバージョンが表示されることもありますが、バージョン(数字)が表示されていればインストールされています。)
+（筆者のPCでは`2.2.13`と表示されていますが、インストールした時期によってバージョンは違います。なので`2.2.13`ではなく、`2.2.14`など別のバージョンが表示されることもありますが、バージョン(数字)が表示されていればインストールされています。)
+
+以上でHomebrewのインストールが完了しました。
+このbrewを使って次の章ではPHPをインストールしていきたいと思います。
+

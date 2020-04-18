@@ -1,13 +1,15 @@
 # Laradockの設定を行おう
 
 前章で簡単にLaradockをダウンロードしましたが、ここから設定を変更していく必要があります。
-少し複雑な部分もありますのでなるべく簡単に設定の変更が行えるような道筋で説明をしています。
+
+少し複雑な部分もありますのでこの教材ではなるべく簡単に設定の変更が行えるような道筋で説明をしています。
+
 Laradockに慣れてきたら自分でより詳細な設定にもチャレンジしてみてください。
 
 ### 舞台をVscodeに移します
 
 ここからはファイルの変更等がありますので、少しでも分かりやすく行うためにVscodeも使用して行きます。
-LaravelフォルダをVscodeに移して行きましょう。
+LaravelフォルダをVscodeで開いて行きましょう。
 
 Vscodeを開き、左上のファイルが二重になっているアイコンをクリックしてください。
 （最初から下の画像のようになっている場合もあります。）
@@ -16,19 +18,28 @@ Vscodeを開き、左上のファイルが二重になっているアイコン�
 
 
 フォルダから開くを選択して前章で作ったLaravelフォルダを開きます。
+
+
 [![Image from Gyazo](https://i.gyazo.com/d0b3f12ba162b37c3da251c525c1ec84.png)](https://gyazo.com/d0b3f12ba162b37c3da251c525c1ec84)
 
 Laravelフォルダが無事に開けましたね。
+
+
 [![Image from Gyazo](https://i.gyazo.com/84eea25e2fc647fcc8d49ddd49412200.png)](https://gyazo.com/84eea25e2fc647fcc8d49ddd49412200)
 
 laradockフォルダにすごい量のフォルダがあることも確認できます。
+
 （今回の教材では一部しか触りませんのでご安心ください）
 
+VScodeでフォルダを開けたところ設定の編集をしていきます。
 
-### laradockの環境設定を行います
+
+### laradockの環境設定
 
 まずはlaradockフォルダで「右クリック」→「ターミナルで開く」を選択して下さい。
+
 [![Image from Gyazo](https://i.gyazo.com/60782a2d3c24b1e9a4e803ff7baf0e9b.png)](https://gyazo.com/60782a2d3c24b1e9a4e803ff7baf0e9b)
+
 
 すると右下にターミナルが開きました。
 便利なことに最初からlaradockフォルダに居てくれてますのでcdなどを使って移動する手間が省けますね。
@@ -43,7 +54,6 @@ laradockフォルダ上で
 
 ```
 $ cp env-example .env
-
 ```
 を打ちます。
 
@@ -52,12 +62,12 @@ env-exampleファイルは最初からlaradockが準備してくれている環�
 
 ```
 ls -a
-
 ```
 を打つとlaradockフォルダに.envファイルが作成することが分かると思います。
 なお、.envの「.」は隠しファイルであることを表しています。
 それだけ大事な情報をここには書きます。（例えばデータベースのパスワードとか）
 なのでlsだけではこのファイルは表示されず-aをつけてあげると表示されます。
+
 
 複製が完了したところで、
 .envをクリックしてファイルを表示させてみましょう。
@@ -69,7 +79,7 @@ ls -a
 1点だけ確認を行います。
 
 以下「PHP MY ADMIN」の箇所を探してください。
-command+fで検索できますのですぐに見つけられるかと思います。
+command+fで検索できますので、PHP MY ADMINで探せばすぐに見つけられるかと思います。
 
 ```
 ### PHP MY ADMIN ##########################################
@@ -148,16 +158,20 @@ nginx/sites/default.confを画像を参考に開いて下さい。
 ECappというのは、次の章で作成するLaravel自体のフォルダの名前です。
 ここを変更する場合は連動して次の章のフォルダの名前も変える必要がありますので注意してください。
 
-これでnginxがlocalhostにアクセスされた際に
-ECapp/publicを見に行ってくれるようになりました。
+（以降の説明もECappという名称で説明しますので初心者の方は無難にECappでいいかと思います。）
 
+これでnginxがlocalhostにアクセスされた際に
+ECapp/publicを見に行ってくれるような設定になりました。
+
+ECapp/publicとは具体的には次章で落とすLaravelフォルダの中にあるpublicフォルダのindex.phpの事です。
 
 ### Dockerのコンテナを立ち上げる
 
 laradockの調整も完了したので、実際にDockerのコンテナ(環境)を立ち上げましょう！
+
 （ネット環境が悪いとこだと時間がかかりすぎるので注意！）
 
-まずはDockerアプリの再起動を行います。
+まずは上記の編集を確実に反映させるためにDockerアプリの再起動を行います。
 パソコンの画面右上にクジラのマークがあるかと思いますが、
 画像の通りrestartを押してください。
 
@@ -173,29 +187,34 @@ laradockフォルダ上で、以下のコマンドを打ちます。
 
 ```
 $ docker-compose up -d nginx mysql phpmyadmin
-
 ```
-dockerに慣れてない方は今は謎かと思いますが、
+dockerに慣れてない方はこのコマンドは今は謎かと思いますが、
 簡単に言うとlaradockに準備されているnginxとMysql、phpmyadminの情報をもとにこれらのコンテナ（環境）を構築して！と言う命令になります。
 
 ```
 ERROR: Couldn't connect to Docker daemon. You might need to start Docker for Mac.
 ```
 
-って出た方はDockerサービス自体の起動を忘れてるだけです。落ち着いて！
-普通にmacのアプリケーションにあるDockerを起動してください。
+って出た方はDockerサービス自体の起動を忘れてるだけだったり、Dockerがまだ起動完了していないだけです。落ち着いてもう一度コマンドを打つか、macのアプリケーションにあるDockerを起動してください。
 
 うまくいった方は環境の構築が始まるかと思います。
 
 数分経って、、、
 
-[![Image from Gyazo](https://i.gyazo.com/213ae3f5820f756f0025deacfabd6199.png)](https://gyazo.com/213ae3f5820f756f0025deacfabd6199)
+```
+Starting laradock_mysql_1            ... done
+Starting laradock_docker-in-docker_1 ... done
+Starting laradock_workspace_1        ... done
+Creating laradock_phpmyadmin_1       ... done
+Starting laradock_php-fpm_1          ... done
+Starting laradock_nginx_1            ... done
+```
 
-こちらが表示されたらサーバー/MySQL/phpMyadminが動き始めています。
+このような表記がされたらサーバー/MySQL/phpMyadminが動き始めている証拠です。
 
 もし、mysqlなどがExitとなった方は、
 XAMPPやMAMP、他のDockerが起動していませんか？？
-ポートが被っているの原因なことが多いです！90%はそうです！
+ポートが被っているのが原因なことが多いです！90%はそうです！
 全てOFFにして、再度docker-compose up -d nginx mysql phpmyadminをすると動くと思います。
 
 ### 立ち上げた環境を確認する
@@ -245,9 +264,14 @@ LaradockはあくまでLaravel自体ではなく、Laravelで使う環境を提�
 全く別のものですので今は「Laravelを動かすための土台が作れたんだな」と認識してもらえたらと思います。
 
 また、Dockerという技術を使うことでこんなにも早く「他人が作った設計書」をもとにLaravelを動かすローカル環境を構築することが出来ました。
+
 10人いる開発チームがあるとしたら、
 もしこれがXamppとかですと一人一人が0からダウンロードや編集を繰り返す必要があります。
-しかしDockerですとLaradockのように必要な情報を取得してもらって微調整するだけで簡単に10人が全く同じ開発環境を作り出すことが出来ます。チーム開発時に重宝される理由が分かりますね。
+おそらくPCに導入しているソフトの違いなどで思わぬエラーも発生するでしょう。
 
-それでは、Laravelの環境が構築できましたので
+しかしDockerですとLaradockのように必要な情報を共有し微調整するだけで簡単に10人が全く同じ開発環境を作り出すことが出来ます。
+
+チーム開発時に重宝される理由が分かりますね。
+
+それでは、Laravelを動かす環境が構築できましたので
 次の章でLaravel自体をインストールしていきたいと思います。
