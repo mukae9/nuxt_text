@@ -101,15 +101,14 @@
  - 0-5 Composerのインストール
 
 ### 1章 Laravelの環境構築
- - 1-1 Dockerのダウンロード
- - 1-2 Laradockのダウンロード
+ - 1-1 Dockerのインストール
+ - 1-2 Laradockのインストール
  - 1-3 Laradockの設定
- - 1-4 Laravelのダウンロード
+ - 1-4 Laravelのインストール
 
 ### 2章 Nuxt.jsの環境構築
  - 2-1 Node.jsのインストール
  - 2-2 Nuxt.jsのインストール
- - 2-3 LaravelとVue.jsの連携を行う
 
 ### 3章 SPAの基本の動きを知る
  - 3-1 必要なページを作成する(デザイン面)
